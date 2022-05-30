@@ -1,0 +1,252 @@
+@import "base/base";
+@import "abstract/constants";
+@import "layout/wrapper";
+
+//Components
+@import "components/section";
+@import "components/title";
+@import "components/slider";
+
+
+.body {
+  background-color: $color-background;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+
+  &__nav {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-blue;
+
+  &__link:hover {
+    color: $color-text;
+  }
+}
+
+.about {
+
+  margin: 40px 0 0 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    // align-items: center;
+  }
+
+  &__photo {
+    width: 60%;
+    align-self: flex-end;
+    padding: 0 30px 0 0;
+  }
+
+  &__image {
+    max-width: 422px;
+    min-width: 200px;
+    width: 100%;
+    vertical-align: bottom;
+  }
+
+  &__info {
+    width: 40%;
+    align-self: flex-end;
+  }
+
+  &__name {
+    font-family: 'Outfit';
+      font-weight: 600;
+      font-size: 5rem;
+      line-height: 100%;
+      text-transform: uppercase;
+      color: $color-blue;
+      width: 100%;
+      text-align: right;
+      margin: 0 100px 20px 0;
+  }
+
+  &__position {
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 100%;
+    text-transform: lowercase;
+    color: $color-blue;
+    text-align: right;
+    margin: 0px 0 20px 0;
+  }
+
+  &__title-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    color: $color-blue;
+    font-family: 'Sacramento';
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 100%;
+    // display: block;
+    text-align: center;
+    // margin: 0 auto;
+    background-image: url('/assets/title-backgrounds/about-title.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom 7px right 50%;
+  }
+
+  &__text {
+    text-align: justify;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $color-text;
+      margin: 40px auto 0 auto;
+    }
+
+  }
+
+}
+
+.contacts-list {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  &__item {
+    width: 33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    a {
+
+      &:hover {
+        // color: $color-blue;
+        color: $color-yellow;
+      }
+
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0 5px 0 0;
+      background-image: url(/assets/icons/github-icon.svg);
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(1) {
+
+      &::before {
+        background-image: url(/assets/icons/phone-icon.svg);
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      &::before {
+        background-image: url(/assets/icons/mail-icon.svg);
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      &::before {
+        background-image: url(/assets/icons/location-icon.svg);
+      }
+
+    }
+
+    &:nth-child(4) {
+
+      &::before {
+        background-image: url(/assets/icons/github-icon.svg);
+      }
+
+    }
+
+    &:nth-child(5) {
+
+      &::before {
+        background-image: url(/assets/icons/linkedin-icon.svg);
+      }
+
+    }
+
+}
+
+}
+
+
+.skills {
+
+  &__title {
+    background-image: url('/assets/title-backgrounds/skills-title.png');
+  }
+
+}
+
+.projects {
+
+  &__title {
+    background-image: url('/assets/title-backgrounds/projects-title.png');
+  }
+
+}
+
+.education {
+
+  &__title {
+    background-image: url('/assets/title-backgrounds/education-title.png');
+  }
+
+}
+
+.english {
+
+  &__title {
+    background-image: url('/assets/title-backgrounds/english-title.png');
+  }
+
+}
+
+
+.footer {
+  &__text {
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+.section {
+  margin: 40px 0 0 0;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 50%;
+    height: 1px;
+    background-color: $color-text;
+    margin: 40px auto 0 auto;
+  }
+
+}
