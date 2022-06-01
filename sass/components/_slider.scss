@@ -1,10 +1,8 @@
 .slider {
-  width: 600px;
-  height: 300px;
+  // width: 600px;
+  // height: 300px;
   margin: 30px auto 0 auto;
-  background-color: red;
   // border: 4px solid $color-blue;
-  border-radius: 2rem;
   // overflow: hidden;
 
 
@@ -13,11 +11,15 @@
   }
 
   &__slides-wrapper {
+    width: 600px;
+    height: 300px;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
+    // width: 100%;
+    // height: 100%;
+    border-radius: 2rem;
     background-color: rgba(223, 223, 211, 0.1);
+    border: 5px solid $color-blue;
+    margin: 0 auto 0 auto;
   }
 
   &__slides {
@@ -29,11 +31,22 @@
 
   &__slide {
     width: 20%;
+    cursor: pointer;
+    transition: 0.5s;
 
     img {
+      text-align: center;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
+      filter: grayscale(1) opacity(0.5);
+
+      &:hover {
+        transform: scale(1.1);
+        // filter: saturate(1);
+        filter: grayscale(0);
+      }
     }
 
   }
@@ -68,7 +81,7 @@
     align-items: center;
     justify-content: center;
     // margin: 0 0 30px 0;
-    padding: 0 0 30px 0;
+    padding: 20px 0 0 0;
   }
 
   &__bar {
@@ -85,7 +98,7 @@
 
       .slider__inside-bar {
         transform: scale(1.2);
-        opacity: 1;
+        opacity: 0.9;
       }
 
     }
@@ -109,39 +122,48 @@
     height: 1.5rem;
     border-radius: 50%;
     transition: 0.3s;
-    // opacity: 0.8;
+    opacity: 1;
   }
   
   #radio1:checked ~ .slider__slides-wrapper .slider__slides {
     margin-left: 0;
   }
-  
-  #radio1:checked ~ .inscriptions-and-controls .inscriptions {
-    margin-left: 0;
+
+  #radio1:checked ~ .slider__controls .inside-bar_1 {
+    background-color: $color-yellow;
   }
 
   #radio2:checked ~ .slider__slides-wrapper .slider__slides {
     margin-left: -100%;
   }
-  
-  #radio2:checked ~ .inscriptions-and-controls .inscriptions {
-    margin-left: -100%;
+
+  #radio2:checked ~ .slider__controls .inside-bar_2 {
+    background-color: $color-yellow;
   }
 
   #radio3:checked ~ .slider__slides-wrapper .slider__slides {
     margin-left: -200%;
   }
-  
-  #radio3:checked ~ .inscriptions-and-controls .inscriptions {
-    margin-left: -200%;
+
+  #radio3:checked ~ .slider__controls .inside-bar_3 {
+    background-color: $color-yellow;
   }
 
   #radio4:checked ~ .slider__slides-wrapper .slider__slides {
     margin-left: -300%;
   }
-  
-  #radio4:checked ~ .inscriptions-and-controls .inscriptions {
-    margin-left: -300%;
+
+  #radio4:checked ~ .slider__controls .inside-bar_4 {
+    background-color: $color-yellow;
   }
+
+  #radio5:checked ~ .slider__slides-wrapper .slider__slides {
+    margin-left: -400%;
+  }
+
+  #radio5:checked ~ .slider__controls .inside-bar_5 {
+    background-color: $color-yellow;
+  }
+  
 
 }

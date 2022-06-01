@@ -1,44 +1,20 @@
 @import "base/base";
 @import "abstract/constants";
+
+//Layouts
 @import "layout/wrapper";
+@import "layout/header";
 
 //Components
+@import "components/nav";
 @import "components/section";
 @import "components/title";
 @import "components/slider";
+@import "components/education-table";
 
 
 .body {
   background-color: $color-background;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-
-  &__nav {
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $color-blue;
-
-  &__link:hover {
-    color: $color-text;
-  }
 }
 
 .about {
@@ -116,6 +92,7 @@
 
   &__text {
     text-align: justify;
+    padding: 20px 0 0 0;
 
     &::after {
       display: block;
@@ -213,7 +190,7 @@
 .skills {
 
   &__title {
-    background-image: url('/assets/title-backgrounds/skills-title.png');
+    background-image: url('./assets/title-backgrounds/skills-title.png');
   }
 
 }
@@ -221,7 +198,7 @@
 .projects {
 
   &__title {
-    background-image: url('/assets/title-backgrounds/projects-title.png');
+    background-image: url('./assets/title-backgrounds/projects-title.png');
   }
 
 }
@@ -229,7 +206,7 @@
 .education {
 
   &__title {
-    background-image: url('/assets/title-backgrounds/education-title.png');
+    background-image: url('./assets/title-backgrounds/education-title.png');
   }
 
 }
@@ -237,7 +214,7 @@
 .english {
 
   &__title {
-    background-image: url('/assets/title-backgrounds/english-title.png');
+    background-image: url('./assets/title-backgrounds/english-title.png');
   }
 
 }
@@ -248,5 +225,15 @@
     font-family: 'Sacramento';
     font-size: 5rem;
     text-align: center;
+
   }
 }
+
+
+.education {
+  &__content {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+

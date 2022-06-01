@@ -18,6 +18,7 @@ html {
   font-size: 10px;
   font-family: "Inter", sans-serif;
   color: #000;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,8 +35,34 @@ body__wrapper {
   padding: 0 20px;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+.header__nav {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0A467C;
+}
+.nav__link:hover {
+  color: #000;
+}
+
 .section {
-  margin: 40px 0 0 0;
+  padding: 30px 0 0 0;
 }
 .section::after {
   display: block;
@@ -63,21 +90,19 @@ body__wrapper {
 }
 
 .slider {
-  width: 600px;
-  height: 300px;
   margin: 30px auto 0 auto;
-  background-color: red;
-  border-radius: 2rem;
 }
 .slider__radio {
   display: none;
 }
 .slider__slides-wrapper {
+  width: 600px;
+  height: 300px;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   background-color: rgba(223, 223, 211, 0.1);
+  border: 5px solid #0A467C;
+  margin: 0 auto 0 auto;
 }
 .slider__slides {
   width: 500%;
@@ -87,11 +112,20 @@ body__wrapper {
 }
 .slider__slide {
   width: 20%;
+  cursor: pointer;
+  transition: 0.5s;
 }
 .slider__slide img {
+  text-align: center;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
+  filter: grayscale(1) opacity(0.5);
+}
+.slider__slide img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
 }
 .slider__inscriptions-and-controls {
   display: flex;
@@ -117,7 +151,7 @@ body__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 30px 0;
+  padding: 20px 0 0 0;
 }
 .slider__bar {
   width: 2rem;
@@ -131,7 +165,7 @@ body__wrapper {
 }
 .slider__bar:hover .slider__inside-bar {
   transform: scale(1.2);
-  opacity: 1;
+  opacity: 0.9;
 }
 .slider__bar:active .slider__inside-bar {
   transform: scale(1.3);
@@ -145,60 +179,87 @@ body__wrapper {
   height: 1.5rem;
   border-radius: 50%;
   transition: 0.3s;
+  opacity: 1;
 }
 .slider #radio1:checked ~ .slider__slides-wrapper .slider__slides {
   margin-left: 0;
 }
-.slider #radio1:checked ~ .inscriptions-and-controls .inscriptions {
-  margin-left: 0;
+.slider #radio1:checked ~ .slider__controls .inside-bar_1 {
+  background-color: #FFCC00;
 }
 .slider #radio2:checked ~ .slider__slides-wrapper .slider__slides {
   margin-left: -100%;
 }
-.slider #radio2:checked ~ .inscriptions-and-controls .inscriptions {
-  margin-left: -100%;
+.slider #radio2:checked ~ .slider__controls .inside-bar_2 {
+  background-color: #FFCC00;
 }
 .slider #radio3:checked ~ .slider__slides-wrapper .slider__slides {
   margin-left: -200%;
 }
-.slider #radio3:checked ~ .inscriptions-and-controls .inscriptions {
-  margin-left: -200%;
+.slider #radio3:checked ~ .slider__controls .inside-bar_3 {
+  background-color: #FFCC00;
 }
 .slider #radio4:checked ~ .slider__slides-wrapper .slider__slides {
   margin-left: -300%;
 }
-.slider #radio4:checked ~ .inscriptions-and-controls .inscriptions {
-  margin-left: -300%;
+.slider #radio4:checked ~ .slider__controls .inside-bar_4 {
+  background-color: #FFCC00;
+}
+.slider #radio5:checked ~ .slider__slides-wrapper .slider__slides {
+  margin-left: -400%;
+}
+.slider #radio5:checked ~ .slider__controls .inside-bar_5 {
+  background-color: #FFCC00;
+}
+
+.education-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.education-table__row {
+  display: flex;
+  justify-content: space-between;
+  color: #0A467C;
+  font-family: "Outfit";
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+.education-table__year {
+  padding: 0 0 0 10px;
+  min-height: 50px;
+  border-right: 1px solid #d0d0d0;
+  width: 25%;
+  min-width: 100px;
+  max-width: 300px;
+  text-align: center;
+}
+.education-table__school {
+  padding: 0 0 0 50px;
+  width: 75%;
+}
+.education-table__school::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  background-color: #0A467C;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.education-table__subitem {
+  padding: 0px 10px 15px 65px;
+  width: 75%;
+  font-size: 1.6rem;
+  color: #000;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .body {
   background-color: #F6F5F5;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100%;
-}
-.header__nav {
-  width: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #0A467C;
-}
-.nav__link:hover {
-  color: #000;
 }
 
 .about {
@@ -264,6 +325,7 @@ body__wrapper {
 }
 .about__text {
   text-align: justify;
+  padding: 20px 0 0 0;
 }
 .about__text::after {
   display: block;
@@ -318,25 +380,30 @@ body__wrapper {
 }
 
 .skills__title {
-  background-image: url("/assets/title-backgrounds/skills-title.png");
+  background-image: url("./assets/title-backgrounds/skills-title.png");
 }
 
 .projects__title {
-  background-image: url("/assets/title-backgrounds/projects-title.png");
+  background-image: url("./assets/title-backgrounds/projects-title.png");
 }
 
 .education__title {
-  background-image: url("/assets/title-backgrounds/education-title.png");
+  background-image: url("./assets/title-backgrounds/education-title.png");
 }
 
 .english__title {
-  background-image: url("/assets/title-backgrounds/english-title.png");
+  background-image: url("./assets/title-backgrounds/english-title.png");
 }
 
 .footer__text {
   font-family: "Sacramento";
   font-size: 5rem;
   text-align: center;
+}
+
+.education__content {
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */
