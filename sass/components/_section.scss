@@ -1,6 +1,6 @@
 .section {
   // margin: 0 0 10px 0;
-	padding: 30px 0 0 0;
+  padding: 30px 0 0 0;
 
   &::after {
     display: block;
@@ -9,6 +9,15 @@
     height: 1px;
     background-color: $color-text;
     margin: 40px auto 0 auto;
+  }
+
+  &:last-of-type {
+    margin-bottom: 40px;
+
+    &::after {
+      display: none;
+    }
+
   }
 
 }
