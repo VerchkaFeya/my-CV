@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Inter:regular" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:regular,600" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Sacramento:regular" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Outfit:600" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
@@ -19,7 +19,7 @@
             <li lass="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
             <li lass="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
             <li lass="nav__item"><a href="#education" class="nav__link">Education</a></li>
-            <li lass="nav__item"><a href="#code" class="nav__link">Code</a></li>
+            <!-- <li lass="nav__item"><a href="#code" class="nav__link">Code</a></li> -->
             <!-- <li lass="nav__item"><a href="#" class="nav__link">Work experience</a></li> -->
             <li lass="nav__item"><a href="#english" class="nav__link">English</a></li>
           </ul>
@@ -28,11 +28,11 @@
     </header>
     <main>
       <section class="about">
-        <div class="wrapper">
+        <div class="about__wrapper wrapper">
           <div class="about__content">
             <h1 class="about__name">Krasnova Vera</h1>
             <div class="about__photo">
-              <img class="about__image" src="./assets/img/my-photo.png" alt="My Photo">
+              <img class="about__image" src="./assets/img/myPhoto.png" alt="My Photo">
             </div>
             <div class="about__info">
               <p class="about__position">Junior frontend developer</p>
@@ -63,15 +63,37 @@
       <section class="skills section" id="skills">
         <div class="wrapper">
           <span class="title-container"><h2 class="skills__title title">Skills</h2></span>
-          <ul class="skills__list skills-list">
-            <li>JavaScript(ES6)</li>
-            <li>HTML</li>
-            <li>CSS/Sass Adaptive/Responsive</li>
-            <li>Webpack</li>
-            <li>Node JS (fundamental)</li>
-            <li>REACT TODO</li>
-          </ul>
-          <p class="skills__text">Information about soft skills, about architect and design skills.</p>
+          <div class="skills-list">
+            <div class="skills-list__skill">
+              <ul>
+                <li class="skills-list__subskill">Semantic HTML</li>
+              </ul>
+            </div>
+            <div class="skills-list__skill">
+              <ul>
+                <li class="skills-list__subskill">SASS/SCSS</li>
+                <li class="skills-list__subskill">Adaptive/Responsive design</li>
+                <li class="skills-list__subskill">BEM</li>
+              </ul>
+            </div>
+            <div class="skills-list__skill">
+              <ul>
+                <li class="skills-list__subskill">ES6</li>
+                <li class="skills-list__subskill skills-list__subskill_start">React.js (start studying)</li>
+                <li class="skills-list__subskill skills-list__subskill_start">TypeScript (start studying)</li>
+                <li class="skills-list__subskill skills-list__subskill_start">Node JS (start studying)</li>
+              </ul>
+            </div>
+            <div class="skills-list__skill">
+              <ul>
+                <li class="skills-list__subskill">Git/GuitHub</li>
+                <li class="skills-list__subskill">Webpack</li>
+                <li class="skills-list__subskill">Figma</li>
+                <li class="skills-list__subskill">Photoshop</li>
+              </ul>
+            </div>
+          </div>
+          <p class="skills__text">Information about soft skill</p>
         </div>
       </section>
       <section class="projects section" id="projects">
@@ -90,7 +112,7 @@
                   <img src="./assets/projects-preview/1-shelter.jpg" alt="shelter">
                   <div class="slider__overview overview">
                     <h4 class="overview__title">Shelter for pets</h4>
-                    <p class="overview__description">Two-page site site of pets shelter. </p>
+                    <p class="overview__description">Two-page site of pets shelter</p>
                     <p class="overview__goals-title">Goals:</p>
                     <ul class="overview__goals">
                       <li class="overview__goals-item">Adaptive and responsive design</li>

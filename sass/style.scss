@@ -11,6 +11,8 @@
 @import "components/title";
 @import "components/slider";
 @import "components/education-table";
+@import "components/contacts-list";
+@import "components/skills-list";
 
 
 .body {
@@ -19,20 +21,53 @@
 
 .about {
 
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('./assets/decorative-images/grey-circles.svg');
+    max-width: 220px;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+    left: 45%;
+    z-index: 0;
+  }
+
   margin: 40px 0 0 0;
+
+  &__wrapper {
+    position: relative;
+  }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    // align-items: center;
   }
 
   &__photo {
     width: 60%;
     align-self: flex-end;
     padding: 0 30px 0 0;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url('./assets/decorative-images/blue-circles.svg');
+      background-repeat: no-repeat;
+      max-width: 455px;
+      max-height: 510px;
+      width: 100%;
+      height: 100%;
+      left: -60px;
+      bottom: 10px;
+      transform: rotate(135deg);
+      z-index: 0;
+    }
+
   }
 
   &__image {
@@ -40,11 +75,14 @@
     min-width: 200px;
     width: 100%;
     vertical-align: bottom;
+    position: relative;
+    z-index: 2;
   }
 
   &__info {
     width: 40%;
     align-self: flex-end;
+    position: relative;
   }
 
   &__name {
@@ -57,6 +95,7 @@
       width: 100%;
       text-align: right;
       margin: 0 100px 20px 0;
+      z-index: 2;
   }
 
   &__position {
@@ -68,6 +107,7 @@
     color: $color-blue;
     text-align: right;
     margin: 0px 0 20px 0;
+    z-index: 2;
   }
 
   &__title-container {
@@ -81,10 +121,8 @@
     font-size: 6rem;
     font-weight: 400;
     line-height: 100%;
-    // display: block;
     text-align: center;
-    // margin: 0 auto;
-    background-image: url('/assets/title-backgrounds/about-title.png');
+    background-image: url('./assets/title-backgrounds/about-title.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom 7px right 50%;
@@ -107,84 +145,7 @@
 
 }
 
-.contacts-list {
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  row-gap: 30px;
-
-  &__item {
-    width: 33%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-
-    a {
-
-      &:hover {
-        // color: $color-blue;
-        color: $color-yellow;
-      }
-
-    }
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      margin: 0 5px 0 0;
-      background-image: url("./assets/icons/github-icon.svg");
-      background-size: 30px 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &:nth-child(1) {
-
-      &::before {
-        background-image: url("./assets/icons/phone-icon.svg");
-      }
-
-    }
-
-    &:nth-child(2) {
-
-      &::before {
-        background-image: url("./assets/icons/mail-icon.svg");
-      }
-
-    }
-
-    &:nth-child(3) {
-
-      &::before {
-        background-image: url("./assets/icons/location-icon.svg");
-      }
-
-    }
-
-    &:nth-child(4) {
-
-      &::before {
-        background-image: url("./assets/icons/github-icon.svg");
-      }
-
-    }
-
-    &:nth-child(5) {
-
-      &::before {
-        background-image: url("./assets/icons/linkedin-icon.svg");
-      }
-
-    }
-
-}
-
-}
 
 
 .skills {
@@ -193,7 +154,12 @@
     background-image: url('./assets/title-backgrounds/skills-title.png');
   }
 
+	&__list {
+		margin: 0 0 0 0;
+	}
 }
+
+
 
 .projects {
 

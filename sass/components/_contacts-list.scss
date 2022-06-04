@@ -1,0 +1,77 @@
+.contacts-list {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  &__item {
+    width: 33%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    a {
+
+      &:hover {
+        color: $color-yellow;
+      }
+
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0 5px 0 0;
+      background-image: url("./assets/icons/github-icon.svg");
+      background-size: 30px 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(1) {
+
+      &::before {
+        background-image: url("./assets/icons/phone-icon.svg");
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      &::before {
+        background-image: url("./assets/icons/mail-icon.svg");
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      &::before {
+        background-image: url("./assets/icons/location-icon.svg");
+      }
+
+    }
+
+    &:nth-child(4) {
+
+      &::before {
+        background-image: url("./assets/icons/github-icon.svg");
+      }
+
+    }
+
+    &:nth-child(5) {
+
+      &::before {
+        background-image: url("./assets/icons/linkedin-icon.svg");
+      }
+
+    }
+
+}
+
+}
