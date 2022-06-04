@@ -154,9 +154,9 @@
     background-image: url('./assets/title-backgrounds/skills-title.png');
   }
 
-	&__list {
-		margin: 0 0 0 0;
-	}
+  &__list {
+    margin: 0 0 0 0;
+  }
 }
 
 
@@ -173,6 +173,11 @@
 
   &__title {
     background-image: url('./assets/title-backgrounds/education-title.png');
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 600px;
   }
 
 }
@@ -192,14 +197,6 @@
     font-size: 5rem;
     text-align: center;
     color: $color-blue;
-  }
-}
-
-
-.education {
-  &__content {
-    margin: 0 auto;
-    max-width: 600px;
   }
 }
 
