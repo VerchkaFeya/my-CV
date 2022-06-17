@@ -148,6 +148,7 @@ body__wrapper {
   top: 0;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in;
+  overflow-y: scroll;
 }
 .slider__controls {
   display: flex;
@@ -350,19 +351,19 @@ body__wrapper {
 }
 .skills-list__skill:nth-child(1) {
   width: 19%;
-  background-image: url("/assets/icons/html-icon.svg");
+  background-image: url("./assets/icons/html-icon.svg");
 }
 .skills-list__skill:nth-child(2) {
   width: 27%;
-  background-image: url("/assets/icons/css-icon.svg");
+  background-image: url("./assets/icons/css-icon.svg");
 }
 .skills-list__skill:nth-child(3) {
   width: 27%;
-  background-image: url("/assets/icons/js-icon.svg");
+  background-image: url("./assets/icons/js-icon.svg");
 }
 .skills-list__skill:nth-child(4) {
   width: 27%;
-  background-image: url("/assets/icons/design-icon.svg");
+  background-image: url("./assets/icons/design-icon.svg");
 }
 .skills-list__subskill {
   font-family: "Inter";
@@ -510,6 +511,10 @@ body__wrapper {
 .education__title {
   background-image: url("./assets/title-backgrounds/education-title.png");
 }
+.education__content {
+  margin: 0 auto;
+  max-width: 600px;
+}
 
 .english__title {
   background-image: url("./assets/title-backgrounds/english-title.png");
@@ -520,11 +525,6 @@ body__wrapper {
   font-size: 5rem;
   text-align: center;
   color: #0A467C;
-}
-
-.education__content {
-  margin: 0 auto;
-  max-width: 600px;
 }
 
 /*# sourceMappingURL=style.css.map */

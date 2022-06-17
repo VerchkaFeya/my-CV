@@ -16,22 +16,22 @@
 
      &:nth-child(1) {
        width: 19%;
-      background-image: url("/assets/icons/html-icon.svg");
+      background-image: url("./assets/icons/html-icon.svg");
      }
 
      &:nth-child(2) {
       width: 27%;
-      background-image: url("/assets/icons/css-icon.svg");
+      background-image: url("./assets/icons/css-icon.svg");
      }
 
      &:nth-child(3) {
       width: 27%;
-      background-image: url("/assets/icons/js-icon.svg");
+      background-image: url("./assets/icons/js-icon.svg");
      }
 
      &:nth-child(4) {
       width: 27%;
-      background-image: url("/assets/icons/design-icon.svg");
+      background-image: url("./assets/icons/design-icon.svg");
      }
 
      text-align: left;
